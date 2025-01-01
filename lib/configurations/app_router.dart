@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:stealth/features/qibla/qibla_screen.dart';
 import 'package:stealth/features/shared/root_screen.dart';
 import 'package:stealth/features/shared/splash_screen.dart';
 import 'package:stealth/utils/stealth_utils.dart';
@@ -33,9 +34,7 @@ final GoRouter stealthAppRouter = GoRouter(
           path: '/qibla',
           pageBuilder: (context, state) {
             return const NoTransitionPage(
-              child: Center(
-                child: Text('Coming Soon'),
-              ),
+              child: QiblaScreen(),
             );
           },
         ),

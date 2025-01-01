@@ -27,7 +27,7 @@ class AppBarItem {
   });
 }
 
-class MuisBottomNavigationBarItemData {
+class StealthBottomNavigationBarItemData {
   final IconData? icon;
   final IconData? activeIcon;
   final String label;
@@ -35,7 +35,7 @@ class MuisBottomNavigationBarItemData {
   final Widget Function()? iconBuilder;
   final Widget Function()? activeIconBuilder;
 
-  MuisBottomNavigationBarItemData({
+  StealthBottomNavigationBarItemData({
     required this.label,
     this.icon,
     this.activeIcon,
@@ -53,23 +53,38 @@ class _RootScreenState extends State<RootScreen> {
     AppBarItem(path: '/profile', showBackgroundColour: false),
   ];
 
-  final List<MuisBottomNavigationBarItemData> bottomNavItems = [
-    MuisBottomNavigationBarItemData(
+  final List<StealthBottomNavigationBarItemData> bottomNavItems = [
+    StealthBottomNavigationBarItemData(
       icon: CupertinoIcons.house,
       activeIcon: CupertinoIcons.house_fill,
       label: 'Home',
     ),
-    MuisBottomNavigationBarItemData(
-      icon: CupertinoIcons.heart,
-      activeIcon: CupertinoIcons.heart_fill,
+    StealthBottomNavigationBarItemData(
+      //icon: CupertinoIcons.heart,
+      //activeIcon: CupertinoIcons.heart_fill,
+      iconBuilder: () {
+        return Image.asset(
+          'assets/icons/qibla-outlined.png',
+          width: 28,
+          height: 28,
+        );
+      },
+      activeIconBuilder: () {
+        return Image.asset(
+          'assets/icons/qibla-filled.png',
+          width: 28,
+          height: 28,
+        );
+      },
+
       label: 'Qibla',
     ),
-    MuisBottomNavigationBarItemData(
+    StealthBottomNavigationBarItemData(
       icon: CupertinoIcons.book,
       activeIcon: CupertinoIcons.book_fill,
       label: "Qur'an",
     ),
-    MuisBottomNavigationBarItemData(
+    StealthBottomNavigationBarItemData(
       icon: CupertinoIcons.person_alt_circle,
       activeIcon: CupertinoIcons.person_alt_circle_fill,
       label: 'Profile',

@@ -59,7 +59,7 @@ class _StealthAppbarState extends State<StealthAppbar> {
           // fontWeight: FontWeight,
           fontFamily: 'Satoshi',
           fontWeight: FontWeight.bold,
-          color: Colors.white,
+          color: Colors.black,
           fontSize: 20,
         ),
       ),
